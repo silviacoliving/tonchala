@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apartahotel Tonchalá — Coliving en Laureles, Medellín. Habitaciones y apartamentos amoblados con todo incluido. Estadías cortas y largas.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Apartahotel Tonchalá — Coliving Medellín">
+  <meta property="og:description" content="Habitaciones y apartamentos amoblados en Laureles, Medellín. Reserva directa disponible.">
+  <meta property="og:type" content="website">
+  <title>Apartahotel Tonchalá — Coliving en Laureles, Medellín</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #1a1a1a; background: #fff; }
+
+    /* NAV */
+    nav { background: #fff; border-bottom: 1px solid #eee; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { font-size: 18px; font-weight: 700; color: #1a1a1a; letter-spacing: -.3px; }
+    .logo span { color: #2563eb; }
+    .nav-cta { background: #2563eb; color: #fff; padding: 8px 18px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 500; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%); color: #fff; padding: 72px 24px 80px; text-align: center; }
+    .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+    .hero p { font-size: clamp(15px, 2.5vw, 19px); opacity: .88; max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white { background: #fff; color: #1e3a5f; padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 15px; }
+    .btn-outline { border: 2px solid rgba(255,255,255,.7); color: #fff; padding: 12px 28px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 15px; }
+    .badge { display: inline-block; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3); padding: 6px 14px; border-radius: 20px; font-size: 13px; margin-bottom: 20px; }
+
+    /* SECTION */
+    section { padding: 64px 24px; max-width: 960px; margin: 0 auto; }
+    section h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; margin-bottom: 12px; color: #1e3a5f; }
+    section .sub { font-size: 16px; color: #555; margin-bottom: 40px; line-height: 1.6; }
+
+    /* CARDS */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 14px; padding: 24px; }
+    .card-icon { font-size: 28px; margin-bottom: 12px; }
+    .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; color: #1e3a5f; }
+    .card p { font-size: 14px; color: #666; line-height: 1.6; }
+
+    /* AMENITIES */
+    .amenities { display: flex; flex-wrap: wrap; gap: 10px; }
+    .amenity { background: #eff6ff; color: #1e40af; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 500; }
+
+    /* LOCATION */
+    .location-block { background: #f8fafc; border-radius: 16px; padding: 32px; display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-start; }
+    .location-block h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; color: #1e3a5f; }
+    .location-block p { font-size: 15px; color: #555; line-height: 1.7; }
+    .loc-detail { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #444; margin-top: 8px; }
+
+    /* CONTACT */
+    .contact-section { background: #1e3a5f; color: #fff; padding: 64px 24px; text-align: center; }
+    .contact-section h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; margin-bottom: 12px; }
+    .contact-section p { font-size: 16px; opacity: .85; margin-bottom: 32px; }
+    .contact-grid { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; max-width: 700px; margin: 0 auto; }
+    .contact-card { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 12px; padding: 20px 28px; min-width: 180px; }
+    .contact-card .label { font-size: 12px; opacity: .7; margin-bottom: 4px; text-transform: uppercase; letter-spacing: .06em; }
+    .contact-card .value { font-size: 15px; font-weight: 600; }
+    .contact-card a { color: #fff; text-decoration: none; }
+
+    .wa-btn { display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: #fff; padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 16px; margin-top: 28px; }
+
+    /* FOOTER */
+    footer { background: #111; color: #888; text-align: center; padding: 24px; font-size: 13px; }
+    footer a { color: #aaa; text-decoration: none; }
+
+    /* DIVIDER */
+    .divider { border: none; border-top: 1px solid #f0f0f0; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 52px 20px 60px; }
+      section { padding: 48px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Tonchalá <span>Coliving</span></div>
+  <a href="https://wa.me/573XXXXXXXXX" class="nav-cta">Reservar ahora</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">📍 Laureles · Medellín, Colombia</div>
+  <h1>Tu hogar en Medellín,<br>desde el primer día</h1>
+  <p>Habitaciones privadas y apartamentos amoblados en el corazón de Laureles. Todo incluido, sin compromisos de largo plazo.</p>
+  <div class="hero-btns">
+    <a href="https://wa.me/573XXXXXXXXX" class="btn-white">💬 Consultar disponibilidad</a>
+    <a href="https://airbnb.com" class="btn-outline">Ver en Airbnb</a>
+  </div>
+</div>
+
+<!-- ALOJAMIENTOS -->
+<section>
+  <h2>Espacios para cada necesidad</h2>
+  <p class="sub">Ofrecemos habitaciones individuales y apartamentos completos, todos amoblados y listos para vivir desde el primer día.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🛏️</div>
+      <h3>Habitaciones privadas</h3>
+      <p>Habitaciones individuales con baño compartido o privado. Ideales para viajeros y profesionales en estadías cortas o largas.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🏠</div>
+      <h3>Apartamentos completos</h3>
+      <p>Apartamentos de 3 y 4 habitaciones para grupos o familias. Con cocina, terraza y todos los servicios incluidos.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3>Coliving para nómadas</h3>
+      <p>Internet de alta velocidad, zona de trabajo y comunidad activa. El espacio ideal para trabajar desde Medellín.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- AMENIDADES -->
+<section>
+  <h2>Todo lo que necesitas incluido</h2>
+  <p class="sub">Cada espacio viene completamente equipado para que solo tengas que llegar con tu maleta.</p>
+  <div class="amenities">
+    <span class="amenity">✅ WiFi alta velocidad</span>
+    <span class="amenity">✅ Ropa de cama</span>
+    <span class="amenity">✅ Agua caliente</span>
+    <span class="amenity">✅ Energía incluida</span>
+    <span class="amenity">✅ Servicio de aseo</span>
+    <span class="amenity">✅ Netflix</span>
+    <span class="amenity">✅ Cocina equipada</span>
+    <span class="amenity">✅ Terraza comunal</span>
+    <span class="amenity">✅ Zona de coworking</span>
+    <span class="amenity">✅ Seguridad 24h</span>
+    <span class="amenity">✅ Check-in flexible</span>
+    <span class="amenity">✅ Sin depósito</span>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- UBICACIÓN -->
+<section>
+  <h2>Ubicación privilegiada</h2>
+  <p class="sub">En el barrio Laureles, uno de los más seguros y mejor ubicados de Medellín.</p>
+  <div class="location-block">
+    <div style="flex:1; min-width:220px">
+      <h3>Laureles, Medellín</h3>
+      <p>A pasos de La 70, restaurantes, cafés, parques y transporte público. El punto perfecto para explorar la ciudad.</p>
+      <div class="loc-detail">📍 Laureles, Medellín, Antioquia</div>
+      <div class="loc-detail">🚇 Cerca al Metro y Metroplus</div>
+      <div class="loc-detail">🏪 La 70 a 2 minutos caminando</div>
+      <div class="loc-detail">✈️ 25 min al aeropuerto</div>
+    </div>
+    <div style="flex:1; min-width:220px; background:#e8f0fe; border-radius:12px; padding:24px; text-align:center;">
+      <div style="font-size:40px; margin-bottom:8px;">🗺️</div>
+      <div style="font-size:14px; color:#1e40af; font-weight:500;">Laureles · La 70<br>Medellín, Colombia</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<div class="contact-section">
+  <h2>¿Listo para reservar?</h2>
+  <p>Escríbenos por WhatsApp y te respondemos en minutos. También puedes encontrarnos en Airbnb y Booking.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="label">WhatsApp</div>
+      <div class="value"><a href="https://wa.me/573XXXXXXXXX">+57 3XX XXX XXXX</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="label">Correo</div>
+      <div class="value"><a href="mailto:info@tudominio.com">info@tudominio.com</a></div>
+    </div>
+    <div class="contact-card">
+      <div class="label">Ubicación</div>
+      <div class="value">Laureles, Medellín</div>
+    </div>
+  </div>
+  <a href="https://wa.me/573XXXXXXXXX" class="wa-btn">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.849L.057 23.5l5.797-1.52A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.651-.52-5.162-1.427l-.371-.22-3.841 1.007 1.027-3.742-.242-.385A9.937 9.937 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    Escribir por WhatsApp
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Apartahotel Tonchalá · Laureles, Medellín, Colombia · 
+  <a href="mailto:info@tudominio.com">info@tudominio.com</a></p>
+</footer>
+
+</body>
+</html>
